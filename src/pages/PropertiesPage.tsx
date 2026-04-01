@@ -2,10 +2,9 @@ import { useState } from 'react';
 import { Topbar } from '@/components/layout/Topbar';
 import { PropertyStatusBadge } from '@/components/ui/StatusBadge';
 import { StatCard } from '@/components/ui/StatCard';
-import { Badge } from '@/components/ui/Badge';
-import { formatXOF, formatDate } from '@/lib/format';
+import { formatXOF } from '@/lib/format';
 import { mockProperties, mockBuilding, mockActiveLeases, mockTenants } from '@/lib/mock-data';
-import { Building2, Search, Filter, Grid3X3, List, MapPin } from 'lucide-react';
+import { Building2, Search, Grid3X3, List } from 'lucide-react';
 import { clsx } from 'clsx';
 
 type ViewMode = 'grid' | 'table';

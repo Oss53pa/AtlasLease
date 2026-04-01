@@ -5,7 +5,7 @@ import { PaymentScoreBadge } from '@/components/ui/PaymentScoreBadge';
 import { Badge } from '@/components/ui/Badge';
 import { formatXOF, formatDate } from '@/lib/format';
 import { mockLeases, mockTenants, mockProperties, mockRentConditions, mockOptions, mockAmendments } from '@/lib/mock-data';
-import { Search, Plus, FileText, Calendar, ArrowUpDown } from 'lucide-react';
+import { Search, Plus, Calendar } from 'lucide-react';
 import { clsx } from 'clsx';
 
 const leaseTypeLabels: Record<string, string> = {

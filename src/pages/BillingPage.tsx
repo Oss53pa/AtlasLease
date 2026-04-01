@@ -4,7 +4,7 @@ import { InvoiceStatusBadge } from '@/components/ui/StatusBadge';
 import { StatCard } from '@/components/ui/StatCard';
 import { formatXOF, formatDate } from '@/lib/format';
 import { mockInvoices, mockLeases, mockTenants } from '@/lib/mock-data';
-import { Receipt, Search, Filter, AlertTriangle, CheckCircle2, Clock, Ban } from 'lucide-react';
+import { Receipt, Search, AlertTriangle, CheckCircle2, Clock } from 'lucide-react';
 
 export function BillingPage() {
   const [statusFilter, setStatusFilter] = useState<string>('ALL');

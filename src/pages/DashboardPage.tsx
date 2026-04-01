@@ -1,11 +1,10 @@
 import { Topbar } from '@/components/layout/Topbar';
 import { StatCard } from '@/components/ui/StatCard';
-import { Badge } from '@/components/ui/Badge';
 import { formatXOF } from '@/lib/format';
 import { mockProperties, mockActiveLeases, mockInvoices, mockBuilding } from '@/lib/mock-data';
 import {
   Building2, TrendingUp, Clock, AlertTriangle,
-  ArrowUpRight, ArrowDownRight, Users, Receipt,
+  ArrowUpRight, Users, Receipt,
 } from 'lucide-react';
 import { BarChart, Bar, XAxis, YAxis, ResponsiveContainer, Tooltip, PieChart, Pie, Cell } from 'recharts';
 
@@ -192,7 +191,7 @@ export function DashboardPage() {
                 <YAxis tick={{ fontSize: 9, fill: '#a3a3a3' }} axisLine={false} tickLine={false} tickFormatter={(v) => `${(v / 1000000).toFixed(0)}M`} />
                 <Tooltip
                   contentStyle={{ fontSize: 11, border: '1px solid #e5e5e5', borderRadius: 6, boxShadow: '0 2px 8px rgba(0,0,0,.08)' }}
-                  formatter={(value: number) => [`${formatXOF(value)} XOF`, 'Revenus']}
+                  formatter={(value: unknown) => [`${formatXOF(value as number)} XOF`, 'Revenus']}
                 />
                 <Bar dataKey="revenue" fill="#171717" radius={[3, 3, 0, 0]} />
               </BarChart>
@@ -211,7 +210,7 @@ export function DashboardPage() {
                 </Pie>
                 <Tooltip
                   contentStyle={{ fontSize: 10, border: '1px solid #e5e5e5', borderRadius: 6 }}
-                  formatter={(value: number) => [`${formatXOF(value)} XOF`]}
+                  formatter={(value: unknown) => [`${formatXOF(value as number)} XOF`]}
                 />
               </PieChart>
             </ResponsiveContainer>
@@ -240,7 +239,7 @@ export function DashboardPage() {
                 <YAxis tick={{ fontSize: 9, fill: '#a3a3a3' }} axisLine={false} tickLine={false} />
                 <Tooltip
                   contentStyle={{ fontSize: 10, border: '1px solid #e5e5e5', borderRadius: 6 }}
-                  formatter={(value: number, name: string) => [value, name === 'count' ? 'Baux' : 'm² GLA']}
+                  formatter={(value: unknown, name: unknown) => [value as number, (name as string) === 'count' ? 'Baux' : 'm² GLA']}
                 />
                 <Bar dataKey="count" fill="#171717" radius={[3, 3, 0, 0]} name="Baux" />
               </BarChart>

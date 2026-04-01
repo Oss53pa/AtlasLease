@@ -11,11 +11,6 @@ const typeLabels: Record<string, string> = {
   OPTION_EXERCISE: 'Exercice option', RENEWAL: 'Renouvellement', ADMINISTRATIVE: 'Admin',
 };
 
-const typeColors: Record<string, string> = {
-  EXTENSION: 'b-info', EXPANSION: 'b-success', CONTRACTION: 'b-warning',
-  RENT_REVIEW: 'b-amber', ASSIGNMENT: 'b-purple', EARLY_TERMINATION: 'b-red',
-};
-
 export function AmendmentsPage() {
   return (
     <div>

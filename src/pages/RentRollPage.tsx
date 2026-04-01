@@ -1,11 +1,10 @@
 import { useState } from 'react';
 import { Topbar } from '@/components/layout/Topbar';
-import { LeaseStatusBadge } from '@/components/ui/StatusBadge';
 import { PaymentScoreBadge } from '@/components/ui/PaymentScoreBadge';
 import { StatCard } from '@/components/ui/StatCard';
 import { formatXOF } from '@/lib/format';
 import { mockActiveLeases, mockBuilding } from '@/lib/mock-data';
-import { TableProperties, Download, ArrowUpDown, TrendingUp, Clock } from 'lucide-react';
+import { Download, ArrowUpDown, TrendingUp, Clock } from 'lucide-react';
 import { clsx } from 'clsx';
 
 type SortKey = 'lease_number' | 'company_name' | 'base_rent_monthly' | 'gla_sqm' | 'remaining_years' | 'rent_per_sqm';

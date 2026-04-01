@@ -1,6 +1,5 @@
 import { Topbar } from '@/components/layout/Topbar';
 import { StatCard } from '@/components/ui/StatCard';
-import { InvoiceStatusBadge } from '@/components/ui/StatusBadge';
 import { PaymentScoreBadge } from '@/components/ui/PaymentScoreBadge';
 import { formatXOF, formatDate } from '@/lib/format';
 import { mockInvoices, mockLeases, mockTenants } from '@/lib/mock-data';
@@ -52,7 +51,7 @@ export function RecoveryPage() {
                 <YAxis tick={{ fontSize: 9, fill: '#a3a3a3' }} axisLine={false} tickLine={false} tickFormatter={(v) => `${(v / 1000000).toFixed(1)}M`} />
                 <Tooltip
                   contentStyle={{ fontSize: 10, border: '1px solid #e5e5e5', borderRadius: 6 }}
-                  formatter={(value: number) => [`${formatXOF(value)} XOF`]}
+                  formatter={(value: unknown) => [`${formatXOF(value as number)} XOF`]}
                 />
                 <Bar dataKey="amount" radius={[3, 3, 0, 0]}>
                   {agingData.map((entry, i) => (

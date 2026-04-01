@@ -2,8 +2,10 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { clsx } from 'clsx';
 import {
   LayoutDashboard, Building2, FileText, TableProperties, Receipt,
-  GitBranch, AlertTriangle, Clock, Tent, Megaphone, PieChart,
-  Car, Users, Brain, ChevronDown, ChevronRight,
+  GitBranch, AlertTriangle, Tent, Megaphone, PieChart,
+  Car, Users, Brain, ChevronDown, ChevronRight, FolderOpen,
+  RefreshCw, Scissors, Layers, Calculator, Landmark, Wrench,
+  BarChart3, TrendingUp,
 } from 'lucide-react';
 import { useState } from 'react';
 
@@ -25,6 +27,14 @@ const navigation: NavSection[] = [
     title: 'Vue d\'ensemble',
     items: [
       { label: 'Dashboard NOI', path: '/', icon: LayoutDashboard },
+      { label: 'Stacking Plan', path: '/stacking-plan', icon: Layers },
+    ],
+  },
+  {
+    title: 'CRM & Prospection',
+    items: [
+      { label: 'Prospects', path: '/prospects', icon: Users },
+      { label: 'Dossiers Locataires', path: '/tenants', icon: FolderOpen },
     ],
   },
   {
@@ -33,8 +43,17 @@ const navigation: NavSection[] = [
       { label: 'Patrimoine', path: '/properties', icon: Building2 },
       { label: 'Contrats', path: '/leases', icon: FileText, badge: '7' },
       { label: 'Rent Roll', path: '/rent-roll', icon: TableProperties },
-      { label: 'Facturation', path: '/billing', icon: Receipt },
+      { label: 'Renouvellements', path: '/renewals', icon: RefreshCw },
       { label: 'Amendments', path: '/amendments', icon: GitBranch },
+      { label: 'Résiliations', path: '/terminations', icon: Scissors },
+    ],
+  },
+  {
+    title: 'Facturation & Recouvrement',
+    items: [
+      { label: 'Facturation', path: '/billing', icon: Receipt },
+      { label: 'Charges & Régul.', path: '/charges', icon: Calculator },
+      { label: 'Taxes locales', path: '/taxes', icon: Landmark },
       { label: 'Recouvrement', path: '/recovery', icon: AlertTriangle },
     ],
   },
@@ -48,9 +67,16 @@ const navigation: NavSection[] = [
     ],
   },
   {
-    title: 'CRM',
+    title: 'Technique',
     items: [
-      { label: 'Prospects', path: '/prospects', icon: Users },
+      { label: 'Maintenance', path: '/maintenance', icon: Wrench },
+    ],
+  },
+  {
+    title: 'Finance & Stratégie',
+    items: [
+      { label: 'IFRS 16', path: '/ifrs16', icon: BarChart3 },
+      { label: 'Simulation What-if', path: '/simulation', icon: TrendingUp },
     ],
   },
   {
